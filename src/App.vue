@@ -65,6 +65,7 @@ export default {
 </script>
 
 <template>
+    <h1>DC COMICS</h1>
     <!-- header -->
     <AppHeader />
 
@@ -75,4 +76,6 @@ export default {
     <AppFooter />
 </template>
 
-<style></style>
+<style lang="scss">
+@use 'assets/scss/style.scss';
+</style>

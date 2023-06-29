@@ -3,7 +3,7 @@
 Creare un nuovo progetto utilizzando Vite e Vue 3.
 Una volta completata la struttura, popolare le voci di menu
 dinamicamente usando i data del componente.
-I font utilizzati sono **Open Sans** e **Open Sans Condensed**
+I font utilizzati sono **Open Sans** e **Fira Sans Condensed**
 
 ---
 
