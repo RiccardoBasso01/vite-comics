@@ -1,14 +1,38 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            imgNames: [
+                {
+                    url: 'footer-facebook.png',
+                },
+                {
+                    url: 'footer-periscope.png',
+                },
+                {
+                    url: 'footer-pinterest.png',
+                },
+                {
+                    url: 'footer-twitter.png',
+                },
+                {
+                    url: 'footer-youtube.png',
+                }
+            ]
+        };
     },
+    methods: {
+        getImagePath(imgName) {
+            const url = new URL(`../assets/img/${imgName}`, import.meta.url)
+            return url.href
+        }
+    }
 }
 </script>
 
 <template>
     <!-- footer -->
-    <div class="footer">
+    <div class="upper-footer">
         <div class="container-xl">
             <div class="footer-nav">
                 <div>
@@ -59,15 +83,27 @@ export default {
                 </div>
             </div>
         </div>
+    </div>
 
-        <div>
-
+    <div class="bottom-footer">
+        <div class="container-xl">
+            <div class="bottom-nav">
+                <button>SIGN-UP NOW!</button>
+                <div class="links-social">
+                    <h4>FOLLOW US</h4>
+                    <ul>
+                        <li v-for="imgName in this.imgNames">
+                            <a href="#"><img :src="getImagePath(imgName.url)" :alt="imgName.url"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.footer {
+.upper-footer {
     background-image: url(../assets/img/dc-logo-bg.png), url(../assets/img/footer-bg.jpg);
     background-position: right 15% center, center;
     background-size: auto 500px, cover;
@@ -91,5 +127,42 @@ li {
 .footer-nav {
     display: flex;
     gap: 20px;
+}
+
+.bottom-footer {
+    background-color: #303030;
+    padding: 20px;
+}
+
+button {
+    color: white;
+    border: 2px solid #0282f9;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+
+    &:hover {
+        background-color: #0282f9;
+    }
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links-social {
+    display: flex;
+
+    h4 {
+        color: #0282f9;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-left: 20px;
+    }
 }
 </style>
