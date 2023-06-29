@@ -97,6 +97,10 @@ header {
     display: block;
     font-size: 13px;
     font-weight: 900;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
 }
 
 ul {
