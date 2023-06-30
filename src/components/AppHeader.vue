@@ -91,7 +91,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-$primaryColor: #0C7CEB;
+@use '../assets/scss/style.scss' as *;
+@use '../assets/scss/_colors.scss' as *;
 
 header {
     display: block;
@@ -116,7 +117,7 @@ li {
     position: relative;
 
     &.active {
-        color: #0C7CEB;
+        color: $primaryColor;
     }
 
     &:hover {
@@ -130,7 +131,7 @@ li:hover::after {
     content: '';
     width: 100%;
     height: 3px;
-    background-color: #0C7CEB;
+    background-color: $primaryColor;
     position: absolute;
     bottom: 0;
     left: 0;

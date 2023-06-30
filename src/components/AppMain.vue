@@ -63,6 +63,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/_colors.scss' as *;
+@use '../assets/scss/style.scss' as *;
+
 .jumbotron {
     height: 500px;
     background-image: url(../assets/img/jumbotron.avif);
@@ -84,10 +87,8 @@ export default {
 }
 
 .main-nav {
-    background-color: #0C7CEB;
-
+    background-color: $primaryColor;
 }
-
 
 ul {
     display: flex;

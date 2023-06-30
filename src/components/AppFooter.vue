@@ -103,6 +103,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/style.scss' as *;
+@use '../assets/scss/_colors.scss' as *;
+
 .upper-footer {
     background-image: url(../assets/img/dc-logo-bg.png), url(../assets/img/footer-bg.jpg);
     background-position: right 15% center, center;
@@ -130,19 +133,19 @@ li {
 }
 
 .bottom-footer {
-    background-color: #303030;
+    background-color: $darkGrey;
     padding: 20px;
 }
 
 button {
     color: white;
-    border: 2px solid #0282f9;
+    border: 2px solid $primaryColor;
     padding: 10px;
     font-weight: 700;
     font-size: 20px;
 
     &:hover {
-        background-color: #0282f9;
+        background-color: $primaryColor;
     }
 }
 
@@ -155,7 +158,7 @@ button {
     display: flex;
 
     h4 {
-        color: #0282f9;
+        color: $primaryColor;
     }
 
     ul {
