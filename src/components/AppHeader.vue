@@ -60,27 +60,30 @@ export default {
 </script>
 
 <template>
-    <!-- header -->
     <header>
         <div class="container-xl">
-
-            <div class="navbar">
+            <div class="d-flex">
                 <div class="logo">
                     <a href="#"><img src="dc-logo.png" alt="logo"></a>
                 </div>
 
-                <div>
-                    <ul>
-                        <li v-for="link in this.links" :class="{ active: link.current }">
-                            <a href="#">{{ link.text.toUpperCase() }}</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="navbar d-none">
+                    <li v-for="link in this.links" :class="{ active: link.current }">
+                        <a href="#">{{ link.text.toUpperCase() }}</a>
+                    </li>
+                </ul>
 
             </div>
-            <div class="navbar">
-                <ul>
-                    <li><a href="#"><img src="../assets/img/search_icon.png" alt="search-icon"></a></li>
+            <div class="center-Y gap-3">
+                <div>
+                    <a href="#"><img src="../assets/img/search_icon.png" alt="search-icon"></a>
+                </div>
+
+                <div class="hamburger-menu">
+                    <a href="#"><img src="../assets/img/hamburger-menu.png" alt="hamburger-menu" title="hamburger-menu"></a>
+                </div>
+
+                <ul class="navbar d-none">
                     <li><a href="#">SIGN UP</a></li>
                     <li><a href="#">LOG IN</a></li>
                 </ul>
@@ -98,15 +101,13 @@ header {
     display: block;
     font-size: 13px;
     font-weight: 900;
+    background-color: white;
     position: sticky;
     top: 0;
     left: 0;
-    background-color: white;
+    z-index: 1;
 }
 
-ul {
-    display: flex;
-}
 
 
 li {
@@ -140,13 +141,8 @@ li:hover::after {
 .container-xl {
     display: flex;
     justify-content: space-between;
-    padding: 0;
-}
-
-.navbar {
     height: 60px;
-    display: flex;
-    align-items: center;
+    padding: 0 10px;
 }
 
 img {
@@ -160,7 +156,6 @@ img {
     img {
         width: 40px;
         margin-right: 40px;
-        display: block;
     }
 }
 </style>

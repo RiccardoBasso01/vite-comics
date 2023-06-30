@@ -31,7 +31,6 @@ export default {
 </script>
 
 <template>
-    <!-- footer -->
     <div class="upper-footer">
         <div class="container-xl">
             <div class="footer-nav">
