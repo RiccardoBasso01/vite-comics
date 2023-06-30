@@ -26,8 +26,9 @@ export default {
         <ul>
             <li v-for="comic in comics">
                 <a href="#">
-                    <img :src="getImagePath(comic.thumb)" :alt="comic.series">
-                    <!-- <span>{{ comic.series }}</span> -->
+                    <img :src="getImagePath(comic.thumb)" :alt="comic.series" :title="comic.series">
+                    <div class="comic-subtitle">{{ comic.type.toUpperCase() }}</div>
+                    <div class="comic-title">{{ comic.series.toUpperCase() }}</div>
                 </a>
             </li>
         </ul>
@@ -49,6 +50,7 @@ li {
     width: calc(100% / $numberOfCols);
     padding: 0 $spacing;
     margin: $spacing 0;
+    text-align: center;
 }
 
 // row
@@ -61,6 +63,18 @@ ul {
 
 a {
     display: block;
+}
+
+.comic-subtitle {
+    color: var(--light-grey);
+    font-size: var(--font-size-xs);
+    margin: 5px 0;
+    font-family: $FiraCode;
+}
+
+.comic-title {
+    color: white;
+    font-weight: 700;
 }
 
 @media screen and (min-width: 576px) {

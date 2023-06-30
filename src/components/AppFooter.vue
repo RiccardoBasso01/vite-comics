@@ -124,6 +124,7 @@ li {
     font-size: 13px;
     font-weight: 200;
     color: grey;
+    font-family: $openSans;
 }
 
 .footer-nav {

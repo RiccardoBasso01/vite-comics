@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/fira-code": "^5.0.3",
     "@fontsource/fira-sans-condensed": "^5.0.3",
     "@fontsource/open-sans": "^5.0.3",
     "scss": "^0.2.4",

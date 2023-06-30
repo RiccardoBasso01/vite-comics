@@ -1,9 +1,9 @@
-body {
-    font-family: 'Fira Sans Condensed', sans-serif;
-}
+$primaryFont: 'Fira Sans Condensed', sans-serif;
+$openSans: "Open Sans", sans-serif;
+$FiraCode: 'Fira Code Variable', sans-serif;
 
-li {
-    font-family: "Open Sans", sans-serif;
+body {
+    font-family: $primaryFont;
 }
 
 

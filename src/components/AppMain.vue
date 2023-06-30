@@ -197,6 +197,7 @@ li {
     font-size: 10px;
     gap: 10px;
     color: white;
+    font-family: $openSans;
 }
 
 img {
